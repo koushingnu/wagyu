@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +27,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 画面右上(0,0)→画面左下(-100vw,100vh) へ無限スクロール */
+/* 右上外 (画面外) → 左下外 (画面外) を一周するアニメに */
+@keyframes slideDiagonalSmooth {
+  0% {
+    transform: translateX(100vw) translateY(-100vh);
+  }
+  100% {
+    transform: translateX(-100vw) translateY(100vh);
+  }
+}
+
+.animate-slideDiagonal {
+  animation: slideDiagonalSmooth 16s linear infinite;
 }
