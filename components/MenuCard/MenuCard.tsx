@@ -40,7 +40,7 @@ export default function MenuCard({
         className="relative flex justify-center w-full mb-8"
         style={{ minHeight: 170 }}
       >
-        <div className="w-full h-[500px] rounded bg-gray-100 flex items-center justify-center mx-auto">
+        <div className="w-full h-[500px] rounded bg-[#B32117] flex items-center justify-center mx-auto">
           <span className="text-gray-400 text-lg font-bold">画像</span>
         </div>
         <div className="absolute right-10 top-1/2 -translate-y-1/2 z-20">
