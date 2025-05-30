@@ -1,10 +1,8 @@
 import React from "react";
-import DiagonalLogo from "../DiagonalLogo";
 
 export default function HeroSection() {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
-      <DiagonalLogo />
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-center bg-gray-50">
           和牛ストールへようこそ
