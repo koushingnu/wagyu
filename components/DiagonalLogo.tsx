@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function DiagonalLogoStream() {
   const LOGOS_PER_COLUMN = 20; // 各列あたりのロゴ数
   const COLUMN_COUNT = 20; // 列の数
-  const DURATION = 200; // アニメ１周の秒数
+  const DURATION = 20; // アニメ１周の秒数
   const delayStep = DURATION / LOGOS_PER_COLUMN;
-  const COLUMN_OFFSET = 370; // 列ごとの横オフセット (px)
+  const COLUMN_OFFSET = 300; // 列ごとの横オフセット (px)
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -38,7 +38,7 @@ export default function DiagonalLogoStream() {
                   className={`relative w-full h-full origin-center ${rotateDeg}`}
                 >
                   <Image
-                    src="/logo.svg"
+                    src="/test.png"
                     alt="logo"
                     fill
                     style={{ objectFit: "contain" }}

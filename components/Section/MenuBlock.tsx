@@ -43,7 +43,7 @@ export default function MenuBlock() {
 
   return (
     <section className="w-full py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 ">
         <h2 className="text-2xl font-bold mb-10 text-center tracking-wide">
           メニュー
         </h2>
