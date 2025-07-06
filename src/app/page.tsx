@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Footer from "../components/Common/Footer";
 import HeaderHamburger from "../components/Common/HeaderHamburger";
 import HeroSection from "../components/Section/HeroSection";
