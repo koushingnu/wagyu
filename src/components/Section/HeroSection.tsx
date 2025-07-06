@@ -9,8 +9,8 @@ export default function HeroSection() {
       const width = window.innerWidth;
       setWindowWidth(width);
       // iPhone 13 Pro Maxの幅（428px）よりも少し大きめに設定
-      setIsMobile(width <= 1800);
-      console.log("Window width:", width, "isMobile:", width <= 1800);
+      setIsMobile(width <= 1000);
+      console.log("Window width:", width, "isMobile:", width <= 1000);
     };
 
     // 初期チェック
