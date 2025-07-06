@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // experimental.turboは非推奨になったため、turbopackに移行
-  turbopack: {
-    enabled: false,
-  },
+  // 基本設定のみを残す
 };
 
 export default nextConfig;
