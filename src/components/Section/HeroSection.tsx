@@ -25,9 +25,7 @@ export default function HeroSection() {
   }, []);
 
   // 動画のパスを定数として定義（publicディレクトリからの相対パス）
-  const videoSrc = isMobile
-    ? "/video/Japan-in-halal-mobile.mp4"
-    : "/video/Japan in halal.mp4";
+  const videoSrc = isMobile ? "/video/japan.mp4" : "/video/Japan in halal.mp4";
 
   // 動画切り替え時のログ
   useEffect(() => {
