@@ -23,31 +23,28 @@ export default function MenuCard({
   return (
     <div
       className={`
-        relative flex flex-col items-center justify-between bg-[#B32117] py-20
+        relative flex flex-col items-center justify-between bg-[#B32117] py-12
         ${showBottomBorder ? "border-b-2 border-white" : ""}
         ${showRightBorder ? "border-r-2 border-white" : ""}
         rounded-none
-        min-h-[780px]         // ← 高さを1.5倍に！
+        aspect-square
       `}
     >
       {/* タイトル */}
-      <div className="w-full text-center mb-6">
+      <div className="w-full text-center mb-4">
         <span className="block text-white text-xl font-bold leading-tight tracking-wider">
           {title}
         </span>
       </div>
       {/* 画像＋帯ラベル */}
-      <div
-        className="relative flex justify-center w-full mb-8"
-        style={{ minHeight: 170 }}
-      >
-        <div className="w-full h-[500px] rounded bg-[#B32117] flex items-center justify-center mx-auto relative">
+      <div className="relative flex justify-center w-full mb-4">
+        <div className="w-full h-[250px] flex items-center justify-center mx-auto relative">
           <Image
             src="/images/menu1.png"
             alt={title}
-            width={300}
-            height={300}
-            className="object-contain transform rotate-12 shadow-xl rounded-lg"
+            width={200}
+            height={200}
+            className="object-contain shadow-xl rounded-lg"
             priority
           />
         </div>
@@ -56,8 +53,8 @@ export default function MenuCard({
         </div>
       </div>
       {/* 説明文 */}
-      <div className="w-full mt-auto mb-4">
-        <p className="text-white text-base text-center leading-relaxed">
+      <div className="w-full mt-auto">
+        <p className="text-white text-base text-center leading-relaxed px-4">
           {desc}
         </p>
       </div>

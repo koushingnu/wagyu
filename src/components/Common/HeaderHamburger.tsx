@@ -15,27 +15,27 @@ export default function HeaderHamburger() {
   ];
 
   return (
-    <header className="fixed top-0 right-0 z-50">
+    <header className="fixed top-0 right-0 z-50 pr-6">
       {/* ハンバーガーボタン */}
       <button
         onClick={toggleMenu}
-        className="z-50 p-6 focus:outline-none"
+        className="z-50 p-8 focus:outline-none cursor-pointer"
         aria-label="メニュー"
       >
-        <div className="relative w-8 h-6">
+        <div className="relative w-10 h-8">
           <span
-            className={`absolute w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-              isOpen ? "top-3 rotate-45" : "top-0"
+            className={`absolute w-10 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+              isOpen ? "top-4 rotate-45" : "top-0"
             }`}
           />
           <span
-            className={`absolute w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-              isOpen ? "opacity-0" : "top-3 opacity-100"
+            className={`absolute w-10 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+              isOpen ? "opacity-0" : "top-4 opacity-100"
             }`}
           />
           <span
-            className={`absolute w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-              isOpen ? "top-3 -rotate-45" : "top-6"
+            className={`absolute w-10 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+              isOpen ? "top-4 -rotate-45" : "top-8"
             }`}
           />
         </div>
