@@ -60,13 +60,13 @@ const menuItems = [
 export default function MenuCardList() {
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-3 grid-rows-3 w-full
-        bg-[#B32117] 
-        border-2 border-white 
-        rounded-none 
-        overflow-hidden 
-        divide-y-0 divide-x-0"
-      style={{ boxShadow: "0 6px 24px rgba(0,0,0,0.10)" }}
+      className={`
+        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+        w-full bg-[#9D2328] 
+        border-[3px] border-[#FFF5EC]
+        rounded-[2px] overflow-hidden
+        shadow-[0_8px_32px_rgba(0,0,0,0.15)]
+      `}
     >
       {menuItems.map((item, i) => (
         <MenuCard key={i} {...item} gridIndex={i} />

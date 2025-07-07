@@ -1,4 +1,6 @@
 // src/components/MenuCard/MenuLabelVertical.tsx
+import { zenAntique, zenKurenaido } from "@/fonts/fonts";
+
 export default function MenuLabelVertical({
   main,
   sub,
@@ -8,27 +10,29 @@ export default function MenuLabelVertical({
 }) {
   return (
     <div
-      className="relative flex flex-row items-center justify-center bg-white border-4 border-[#B32117] py-2 gap-x-3"
-      style={{
-        width: sub ? "90px" : "56px",
-        minHeight: "300px",
-        borderRadius: "0.5rem",
-        boxShadow: "inset 0 0 0 4px #fff",
-      }}
+      className={`
+        relative flex flex-row items-center justify-center 
+        bg-[#FFF5EC] border-[3px] border-[#9D2328] 
+        py-2 sm:py-2 gap-x-1 sm:gap-x-1
+        ${sub ? "w-[48px] sm:w-[54px] md:w-[60px]" : "w-[32px] sm:w-[36px] md:w-[40px]"}
+        min-h-[160px] sm:min-h-[180px] md:min-h-[200px]
+        rounded-[2px]
+      `}
     >
       {sub && (
         <span
-          className="text-xs text-[#B32117] flex items-center justify-center"
+          className={`text-xs sm:text-xs text-[#9D2328] flex items-center justify-center ${zenKurenaido.className}`}
           style={{
             writingMode: "vertical-rl",
             textAlign: "center",
+            letterSpacing: "0.1em",
           }}
         >
           {sub}
         </span>
       )}
       <span
-        className="font-bold text-[#B32117] text-2xl tracking-wider flex items-center justify-center"
+        className={`text-[#9D2328] text-base sm:text-lg md:text-xl tracking-[0.2em] flex items-center justify-center ${zenAntique.className}`}
         style={{
           writingMode: "vertical-rl",
           textAlign: "center",

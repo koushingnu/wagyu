@@ -1,5 +1,6 @@
 import MenuLabelVertical from "./MenuLabelVertical";
 import Image from "next/image";
+import { zenAntique, zenKurenaido } from "@/fonts/fonts";
 
 type MenuCardProps = {
   title: string;
@@ -23,38 +24,43 @@ export default function MenuCard({
   return (
     <div
       className={`
-        relative flex flex-col items-center justify-between bg-[#B32117] py-12
-        ${showBottomBorder ? "border-b-2 border-white" : ""}
-        ${showRightBorder ? "border-r-2 border-white" : ""}
+        relative flex flex-col items-center justify-between 
+        bg-[#9D2328] p-4 sm:p-6 md:p-8
+        ${showBottomBorder ? "border-b-[3px] border-[#FFF5EC]" : ""}
+        ${showRightBorder ? "border-r-[3px] border-[#FFF5EC]" : ""}
         rounded-none
         aspect-square
       `}
     >
       {/* タイトル */}
-      <div className="w-full text-center mb-4">
-        <span className="block text-white text-xl font-bold leading-tight tracking-wider">
+      <div className="w-full text-center mb-4 sm:mb-6">
+        <span
+          className={`block text-[#FFF5EC] text-lg sm:text-xl md:text-2xl tracking-[0.25em] leading-tight ${zenAntique.className}`}
+        >
           {title}
         </span>
       </div>
       {/* 画像＋帯ラベル */}
-      <div className="relative flex justify-center w-full mb-4">
-        <div className="w-full h-[250px] flex items-center justify-center mx-auto relative">
+      <div className="relative flex justify-center w-full mb-4 sm:mb-6">
+        <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] flex items-center justify-center mx-auto relative">
           <Image
-            src="/images/menu1.png"
+            src="/images/food_1.png"
             alt={title}
-            width={200}
-            height={200}
-            className="object-contain shadow-xl rounded-lg"
+            width={180}
+            height={180}
+            className="object-contain w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px]"
             priority
           />
         </div>
-        <div className="absolute right-10 top-1/2 -translate-y-1/2 z-20">
+        <div className="absolute -right-1 top-1/2 -translate-y-1/2 z-20">
           <MenuLabelVertical main={labelMain} sub={labelSub} />
         </div>
       </div>
       {/* 説明文 */}
       <div className="w-full mt-auto">
-        <p className="text-white text-base text-center leading-relaxed px-4">
+        <p
+          className={`text-[#FFF5EC] text-sm sm:text-base tracking-[0.15em] leading-relaxed px-2 sm:px-4 ${zenKurenaido.className}`}
+        >
           {desc}
         </p>
       </div>
